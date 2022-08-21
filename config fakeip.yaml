@@ -314,7 +314,7 @@ rule-providers:
   trojan:
     type: http
     behavior: classical
-    path: "./asTrojan.yaml"
+    path: "./Trojan.yaml"
     url: https://raw.githubusercontent.com/dhedy09/akun/main/Trojan.yaml
     interval: 86400
   Shadowsocks:
