@@ -108,6 +108,22 @@ proxy-groups:
   type: select
   proxies:
     - 🈵ALL-SERVER-BEST🈵
+    - 👨🏻‍💻VMESS👨🏻‍💻
+    - 👽VLESS👽
+    - 👾TROJAN👾
+    - ☣️SHADOWSOCKS☣️
+    - 👨🏻‍💻VMESS-BEST👨🏻‍💻
+    - 👽VLESS-BEST👽
+    - 👾TROJAN-BEST👾
+    - ☣️SHADOWSOCKS-BEST☣️
+    - 👨🏻‍💻VMESS-LOADBALANCE👨🏻‍💻
+    - 👽VLESS-LOADBALANCE👽
+    - 👾TROJAN-LOADBALANCE👾
+    - ☣️SHADOWSOCKS-LOADBALANCE☣️
+    - 👨🏻‍💻VMESS-FALLBACK👨🏻‍💻
+    - 👽VLESS-FALLBACK👽
+    - 👾TROJAN-FALLBACK👾
+    - ☣️SHADOWSOCKS-FALLBACK☣️
 
 - name: 🈵ALL-SERVER-BEST🈵
   type: url-test
@@ -121,7 +137,7 @@ proxy-groups:
   type: select
   use:
   - VMESS
-- name: 🕷️VLESS🕷️
+- name: 👽VLESS👽
   type: select
   use:
   - VLESS
@@ -139,7 +155,7 @@ proxy-groups:
   tolerance: 100
   use:
   - VMESS
-- name: 🕷️VLESS-BEST🕷️
+- name: 👽VLESS-BEST👽
   type: url-test
   tolerance: 100
   use:
@@ -161,7 +177,7 @@ proxy-groups:
   disable-udp: false
   use:
   - VMESS
-- name: 🕷️VLESS-LOADBALANCE🕷️
+- name: 👽VLESS-LOADBALANCE👽
   type: load-balance
   strategy: consistent-hashing
   disable-udp: false
@@ -186,7 +202,7 @@ proxy-groups:
   interval: 300
   use:
   - VMESS  
-- name: 🕷️VLESS-FALLBACK🕷️
+- name: 👽VLESS-FALLBACK👽
   type: fallback
   url: http://hi.bonds.id/ping
   interval: 300
@@ -210,25 +226,25 @@ rule-providers:
     type: http
     behavior: classical
     path: "./Vmess.yaml"
-    url: https://raw.githubusercontent.com/dhedy09/akun/main/Vmess.yaml
+    url: https://raw.githubusercontent.com/dhedy09/akunAs/main/Vmess.yaml
     interval: 86400
   Vless:
     type: http
     behavior: classical
     path: "./Vless.yaml"
-    url: https://raw.githubusercontent.com/dhedy09/akun/main/Vless.yaml
+    url: https://raw.githubusercontent.com/dhedy09/akunAs/main/Vless.yaml
     interval: 86400
   trojan:
     type: http
     behavior: classical
     path: "./Trojan.yaml"
-    url: https://raw.githubusercontent.com/dhedy09/akun/main/Trojan.yaml
+    url: https://raw.githubusercontent.com/dhedy09/akunAs/main/Trojan.yaml
     interval: 86400
   Shadowsocks:
     type: http
     behavior: classical
     path: "./Shadowsocks.yaml"
-    url: https://raw.githubusercontent.com/dhedy09/akun/main/Shadowsocks.yaml
+    url: https://raw.githubusercontent.com/dhedy09/akunAs/main/Shadowsocks.yaml
     interval: 86400    
 
 rules:
